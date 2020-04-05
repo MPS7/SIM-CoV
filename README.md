@@ -19,7 +19,8 @@ The SIM-CoV code was developed and tested under Ubuntu 16.04. There exist few de
 Use the following commands to compile, build and execute:
 
 g++ -I/usr/local/include -c main.cc 
-g++ -L/usr/local/lib main.o -lgsl -lgslcblas -lm^C
+g++ -L/usr/local/lib main.o -lgsl -lgslcblas -lm
+
 ./a.out
 
 
