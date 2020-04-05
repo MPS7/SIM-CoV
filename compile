@@ -1,0 +1,5 @@
+g++ -I/usr/local/include -c main.cc 
+g++ -L/usr/local/lib main.o -lgsl -lgslcblas -lm
+
+./a.out	
+
