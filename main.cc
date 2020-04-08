@@ -44,9 +44,9 @@ double cumV = 0;
 
 
 
-const int t_num = 25000000; // number of time steps (running from 1 to t_num)
-const int t_disk = 1000;  // steps to save results
-const int t_info = 1000;  // time steps to write info
+const int t_num = 2500000; // number of time steps (running from 1 to t_num)
+const int t_disk = 100;  // steps to save results
+const int t_info = 100;  // time steps to write info
 
 
 
@@ -433,8 +433,8 @@ void computeForces(gsl_rng * r){
         double r1 = (double) rand()/RAND_MAX;
         double r2 = (double) rand()/RAND_MAX;
 
-        c->f.x +=  (1.34*3600*gsl_ran_gaussian(r, 0.26*3600) - c->v.x)/0.5 + ff*(- 0.5 + r1);
-        c->f.y +=  (1.34*3600*gsl_ran_gaussian(r, 0.26*3600) - c->v.y)/0.5 + ff*(- 0.5 + r2);
+        c->f.x +=  (1.34*3600*gsl_ran_gaussian(r, 0.26) - c->v.x)/(dt*0.55) + ff*(- 0.5 + r1);
+        c->f.y +=  (1.34*3600*gsl_ran_gaussian(r, 0.26) - c->v.y)/(dt*0.55) + ff*(- 0.5 + r2);
     }
 
   }
@@ -513,15 +513,17 @@ void updatePatches() {
 
 void compute_average(){
 
-/*
+
 
 long long cumul;
 
 allcells(c){
 		cumul += sqrt(SQ(c->v.x) + SQ(c->v.y))/numb4;
 	}
-*/
 
+cout << cumul << endl;
+
+/*
 cumV = 0;
 
     for(int X = 1; X < Nx -1 ; ++X) {
@@ -529,6 +531,8 @@ cumV = 0;
 		cumV += factorCa[X][Y];
 
     }}
+
+*/
  
 }
 
@@ -1022,7 +1026,6 @@ for (int j=0; j<numb_immune; j++){
 
   return;
 }
-
 
 
 
