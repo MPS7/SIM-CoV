@@ -187,9 +187,9 @@ void Cell::infected(double dt, int tot_case)
 void Cell::Move2(double dt,int t)
 {
   if (f.x == 0) v.x = 0;
-  else v.x = (v.x + dt*(f.x));
+  else v.x = (v.x + dt*(f.x)  );
   if (f.y == 0) v.y = 0;
-  else v.y = (v.y + dt*(f.y));
+  else v.y = (v.y + dt*(f.y) );
 
 
   if (pos.x > 0 && pos.x < 500 && pos.y > 0 && pos.y < 500) pos+=v*dt;
@@ -305,7 +305,6 @@ Cell::Cell(Vect2D pos_, double r0_,int type_, double Fasl_, int infectious_, int
 }
 
 }
-
 
 
 
