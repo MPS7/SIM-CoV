@@ -1,5 +1,5 @@
-SIM-CoV v1.1
-============
+SIM-CoV v1.1b
+=============
 
 SIM-CoV is a hybrid multi-scale simulator for COVID-19 transmission dynamics.
 
