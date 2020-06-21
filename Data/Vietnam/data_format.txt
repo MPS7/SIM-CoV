@@ -1,0 +1,3 @@
+The datasets contain files in the following formats:
+
+time // active infected // active symptomatic // active quarantined // immunized // death // cumulative infected
