@@ -27,3 +27,7 @@ g++ -L/usr/local/lib main.o -lgsl -lgslcblas -lm
 # Post-processing and visualization
 
 VTK files are generated in the vtk_particle and vtk_PDE folders upon running the program. We recommand using ParaView to properly visualize the simulations. The generated file data.txt contains the number of the different agent types over time. The file data2.txt contains demographic characteristics of the sampled population.
+
+# References:
+- Bouchnita, Anass, and Aissam Jebrane. "A hybrid multi-scale model of COVID-19 transmission dynamics to assess the potential of non-pharmaceutical interventions." Chaos, Solitons & Fractals 138 (2020): 109941.
+- Bouchnita, Anass, and Aissam Jebrane. "A multi-scale model quantifies the impact of limited movement of the population and mandatory wearing of face masks in containing the COVID-19 epidemic in Morocco." Mathematical Modelling of Natural Phenomena 15 (2020): 31.
